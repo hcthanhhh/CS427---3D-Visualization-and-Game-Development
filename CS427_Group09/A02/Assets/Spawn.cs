@@ -8,7 +8,7 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating ("spawn",0,3); 
+        InvokeRepeating ("spawn",3,0); 
     
     }
 
@@ -21,10 +21,9 @@ public class Spawn : MonoBehaviour
     public void spawn()
     {
         GameObject newPlayer = (GameObject) Instantiate (Player) as GameObject;
-        float x = Random.Range(-5,5);
-        float y = Random.Range(-2,2);
+        float x = Random.Range(-5,5); 
 
-        newPlayer.transform.position = new Vector2(x,y);
+        newPlayer.transform.position = new Vector2(x,-3);
 
     }
 }
